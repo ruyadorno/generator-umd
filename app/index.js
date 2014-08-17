@@ -1,12 +1,15 @@
 'use strict';
-var util = require('util');
+
 var path = require('path');
 var yeoman = require('yeoman-generator');
 var yosay = require('yosay');
-var chalk = require('chalk');
+
+
+// ---
 
 
 var UmdGenerator = yeoman.generators.Base.extend({
+
   init: function () {
     this.pkg = require('../package.json');
 
@@ -21,7 +24,7 @@ var UmdGenerator = yeoman.generators.Base.extend({
     var done = this.async();
 
     // Have Yeoman greet the user.
-    this.log(yosay('Welcome to the marvelous Umd generator!'));
+    this.log(yosay('Welcome to UMD generator!'));
 
     var prompts = [{
       type: 'confirm',
@@ -52,3 +55,4 @@ var UmdGenerator = yeoman.generators.Base.extend({
 });
 
 module.exports = UmdGenerator;
+
