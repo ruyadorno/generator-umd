@@ -27,14 +27,13 @@ var UmdGenerator = yeoman.generators.Base.extend({
     this.log(yosay('Welcome to UMD generator!'));
 
     var prompts = [{
-      type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
-      default: true
+      type: 'input',
+      name: 'moduleName',
+      message: 'What is your module name?'
     }];
 
     this.prompt(prompts, function (props) {
-      this.someOption = props.someOption;
+      this.moduleName = props.moduleName;
 
       done();
     }.bind(this));

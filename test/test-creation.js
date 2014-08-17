@@ -1,35 +1,65 @@
 /*global describe, beforeEach, it */
 'use strict';
+
 var path = require('path');
-var helpers = require('yeoman-generator').test;
+var yo = require('yeoman-generator');
+
+
+// ---
+
 
 describe('umd generator', function () {
+
   beforeEach(function (done) {
-    helpers.testDirectory(path.join(__dirname, 'temp'), function (err) {
+    yo.test.testDirectory(path.join(__dirname, 'temp'), function (err) {
       if (err) {
         return done(err);
       }
 
-      this.app = helpers.createGenerator('umd:app', [
+      this.app = yo.test.createGenerator('umd:app', [
         '../../app'
       ]);
       done();
     }.bind(this));
   });
 
+
+  // ---
+
+
   it('creates expected files', function (done) {
+
     var expected = [
-      // add files you expect to exist here.
       '.jshintrc',
-      '.editorconfig'
+      '.editorconfig',
+      'bower.json',
+      'package.json'
     ];
 
-    helpers.mockPrompt(this.app, {
-      'someOption': true
+    yo.test.mockPrompt(this.app, {
+      'moduleName': 'somename'
     });
+
     this.app.options['skip-install'] = true;
     this.app.run({}, function () {
-      helpers.assertFile(expected);
+      yo.assert.file(expected);
+      done();
+    });
+  });
+
+
+  // ---
+
+
+  it('prompted options are correctly used', function (done) {
+
+    yo.test.mockPrompt(this.app, {
+      'moduleName': 'somename'
+    });
+
+    this.app.options['skip-install'] = true;
+    this.app.run({}, function () {
+      yo.assert.fileContent('package.json', /somename/);
       done();
     });
   });
