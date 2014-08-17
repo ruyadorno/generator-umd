@@ -1,14 +1,13 @@
 {
   "name": "generator-umd",
   "version": "0.0.0",
-  "description": "Yeoman generator",
+  "description": "Yeoman Generator to create a basic UMD structure.",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "ruyadorno/generator-umd",
+  "repository": "https://github.com/ruyadorno/generator-umd.git",
   "author": {
     "name": "Ruy Adorno",
-    "email": "",
-    "url": "https://github.com/ruyadorno"
+    "url": "http://ruyadornocom"
   },
   "engines": {
     "node": ">=0.10.0"
@@ -16,14 +15,15 @@
   "scripts": {
     "test": "mocha"
   },
-  "files": [
-    "app"
-  ],
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "generator",
+    "yeoman",
+    "module",
+    "umd"
   ],
   "dependencies": {
-    "yeoman-generator": "~0.16.0",
+    "yeoman-generator": "~0.17.x",
     "chalk": "~0.4.0",
     "yosay": "^0.1.0"
   },
