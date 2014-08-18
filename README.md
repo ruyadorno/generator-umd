@@ -2,7 +2,7 @@
 
 version: 0.0.0
 
-[![Build Status](https://travis-ci.org/ruyadorno/simple-output.svg?branch=master)](https://travis-ci.org/SunGard-Labs/grunt-sg-release)
+[![Build Status](https://travis-ci.org/ruyadorno/generator-umd.svg?branch=master)](https://travis-ci.org/ruyadorno/generator-umd)
 
 > An Yeoman Generator to create a basic [UMD](https://github.com/umdjs/umd) (Universal Module Definition) structure.
 
