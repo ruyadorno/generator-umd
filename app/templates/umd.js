@@ -21,11 +21,11 @@
 
   'use strict';
 
-  function <%= moduleDefinition %>() {
+  var <%= moduleDefinition %> = function <%= moduleDefinition %>() {
     this.someProperty = 'value';
-  }
+  };
 
-  <%= moduleDefinition %>.prototype.someMethod = function(value) {
+  <%= moduleDefinition %>.prototype.someMethod = function (value) {
     return value + this.someProperty;
   };
 
