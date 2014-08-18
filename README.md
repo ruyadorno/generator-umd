@@ -4,20 +4,20 @@ version: 0.0.0
 
 [![Build Status](https://travis-ci.org/ruyadorno/simple-output.svg?branch=master)](https://travis-ci.org/SunGard-Labs/grunt-sg-release)
 
-> An Yeoman Generator to create a basic [UMD](https://github.com/umdjs/umd) structure.
+> An Yeoman Generator to create a basic [UMD](https://github.com/umdjs/umd) (Universal Module Definition) structure.
 
 
 ## Getting Started
 
 ### About
 
-This script is an [Yeoman Generator](http://yeoman.io/), meant to be used with some Javascript modern tools such as [npm](https://www.npmjs.org), [Bower](http://bower.io/), etc.
+This script is an [Yeoman Generator](http://yeoman.io/), meant to be used with some modern Javascript tools such as [npm](https://www.npmjs.org) and [Bower](http://bower.io/).
 
-### Module specs
+### Information on the generated module
 
 - The generated module will use the [returnExportsGlobal](https://github.com/umdjs/umd/blob/master/returnExportsGlobal.js) definition from [UMD](https://github.com/umdjs/umd).
 
-- It will also provide support to both AMD([RequireJS](http://requirejs.org/)), [Node.js](http://nodejs.org/), [Browserify](http://browserify.org/) and global namespace definition.
+- It will provide support to both AMD([RequireJS](http://requirejs.org/)), [Node.js](http://nodejs.org/), [Browserify](http://browserify.org/) and global namespace definition.
 
 - File definition for both **npm** and **Bower** package managers will be also generated along with the initial structure.
 
@@ -61,6 +61,11 @@ yo umd
 - A module name
 - A description to your module (optional)
 - The repository URL for your module (optional)
+
+4) You should be ready to go!
+
+- Tests can be run using `npm test` command.
+- Please do not remove the comments metadata from the generated js file, see reasoning below.
 
 
 ## Todo
