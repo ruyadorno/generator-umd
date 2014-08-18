@@ -54,12 +54,16 @@ describe('umd generator', function () {
   it('prompted options are correctly used', function (done) {
 
     yo.test.mockPrompt(this.app, {
-      'moduleName': 'somename'
+      'moduleName': 'somename',
+      'description': 'bla bla bla',
+      'repository': 'https://github.com/ruyadorno/generator-umd.git'
     });
 
     this.app.options['skip-install'] = true;
     this.app.run({}, function () {
       yo.assert.fileContent('package.json', /somename/);
+      yo.assert.fileContent('package.json', /bla\ bla\ bla/);
+      yo.assert.fileContent('package.json', /github\.com/);
       done();
     });
   });

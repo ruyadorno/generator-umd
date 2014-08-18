@@ -37,6 +37,16 @@ var UmdGenerator = yeoman.generators.Base.extend({
       type: 'input',
       name: 'moduleName',
       message: 'What is your module name?'
+    }, {
+      type: 'input',
+      name: 'description',
+      message: 'Give a brief description about your module:',
+      default: ''
+    }, {
+      type: 'input',
+      name: 'repository',
+      message: 'Does it already have a repository? Provide the URL if that is the case:',
+      default: ''
     }];
 
     // Register required data from answers
@@ -44,6 +54,8 @@ var UmdGenerator = yeoman.generators.Base.extend({
 
       this.moduleName = toSlugCase(props.moduleName.trim());
       this.moduleDefinition = toCamelCase(this.moduleName);
+      this.description = props.description.trim();
+      this.repository = props.repository.trim();
 
       done();
     }.bind(this));
