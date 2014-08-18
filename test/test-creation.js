@@ -33,7 +33,9 @@ describe('umd generator', function () {
       '.jshintrc',
       '.editorconfig',
       'bower.json',
-      'package.json'
+      'package.json',
+      'README.md',
+      'somename.js'
     ];
 
     yo.test.mockPrompt(this.app, {

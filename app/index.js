@@ -80,6 +80,7 @@ var UmdGenerator = yeoman.generators.Base.extend({
 
     this.copy('editorconfig', '.editorconfig');
     this.copy('jshintrc', '.jshintrc');
+    this.copy('README.md', 'README.md');
     this.copy('umd.js', this.moduleName + '.js');
 
   }
