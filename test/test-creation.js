@@ -63,4 +63,49 @@ describe('umd generator', function () {
       done();
     });
   });
+
+
+  // ---
+
+
+  it('should be able to access module properties', function (done) {
+
+    yo.test.mockPrompt(this.app, {
+      'moduleName': 'somename'
+    });
+
+    this.app.options['skip-install'] = true;
+    this.app.run({}, function () {
+
+      var filename = process.cwd() + '/somename.js';
+      var Mymodule = require(filename);
+      var myinstance = new Mymodule();
+
+      yo.assert.textEqual(myinstance.someProperty, 'value');
+      done();
+    });
+  });
+
+
+  // ---
+
+
+  it('should be able to access module methods', function (done) {
+
+    yo.test.mockPrompt(this.app, {
+      'moduleName': 'somename'
+    });
+
+    this.app.options['skip-install'] = true;
+    this.app.run({}, function () {
+
+      var filename = process.cwd() + '/somename.js';
+      var Mymodule = require(filename);
+      var myinstance = new Mymodule();
+
+      yo.assert.textEqual(myinstance.someMethod('hello '), 'hello value');
+      done();
+    });
+  });
 });
+

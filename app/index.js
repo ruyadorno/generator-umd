@@ -33,7 +33,8 @@ var UmdGenerator = yeoman.generators.Base.extend({
     }];
 
     this.prompt(prompts, function (props) {
-      this.moduleName = props.moduleName;
+      this.moduleName = props.moduleName.trim();
+      this.moduleDefinition = this.moduleName;
 
       done();
     }.bind(this));
@@ -50,6 +51,7 @@ var UmdGenerator = yeoman.generators.Base.extend({
   projectfiles: function () {
     this.copy('editorconfig', '.editorconfig');
     this.copy('jshintrc', '.jshintrc');
+    this.copy('umd.js', this.moduleName + '.js');
   }
 });
 
