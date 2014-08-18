@@ -2,7 +2,13 @@
   "name": "<%= moduleName %>",
   "version": "0.0.0",
   "description": "<%= description %>",
+  "scripts": {
+    "test": "mocha test/*.js"
+  },
   "repository": "<%= repository %>",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "~1.21.x"
+  }
 }
 
