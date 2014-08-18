@@ -7,6 +7,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         sg_release: {
             options: {
+                skipBowerInstall: true,
                 files: ['package.json', 'README.md'],
                 commitFiles: ['-a'],
                 pushTo: 'origin'
