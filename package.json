@@ -29,6 +29,7 @@
     "yosay": "^0.1.0"
   },
   "devDependencies": {
+    "grunt-sg-release": "=0.2.2",
     "mocha": "*"
   },
   "peerDependencies": {
