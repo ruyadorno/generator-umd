@@ -18,6 +18,10 @@
   }
 
 }(this, function () {
+// UMD Definition above, do not remove this line
+
+// To get to know more about the Universal Module Definition
+// visit: https://github.com/umdjs/umd
 
   'use strict';
 
