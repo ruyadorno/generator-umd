@@ -1,6 +1,7 @@
 'use strict';
 
-var path = require('path');
+var toCamelCase = require('to-camel-case');
+var toSlugCase = require('to-slug-case');
 var yeoman = require('yeoman-generator');
 var yosay = require('yosay');
 
@@ -33,8 +34,8 @@ var UmdGenerator = yeoman.generators.Base.extend({
     }];
 
     this.prompt(prompts, function (props) {
-      this.moduleName = props.moduleName.trim();
-      this.moduleDefinition = this.moduleName;
+      this.moduleName = toSlugCase(props.moduleName.trim());
+      this.moduleDefinition = toCamelCase(this.moduleName);
 
       done();
     }.bind(this));
