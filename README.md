@@ -1,6 +1,6 @@
 # generator-umd
 
-version: 0.1.1-rc
+version: 0.1.1
 
 [![Build Status](https://travis-ci.org/ruyadorno/generator-umd.svg?branch=master)](https://travis-ci.org/ruyadorno/generator-umd)
 
