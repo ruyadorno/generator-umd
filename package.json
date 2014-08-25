@@ -1,6 +1,6 @@
 {
   "name": "generator-umd",
-  "version": "0.1.1",
+  "version": "0.1.2-rc",
   "description": "An Yeoman Generator to create a basic UMD structure",
   "license": "MIT",
   "main": "app/index.js",
