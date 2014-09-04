@@ -126,6 +126,9 @@ describe('umd generator', function () {
       'moduleName': 'somename'
     });
 
+    // Can take some extra time to run these tests
+    this.timeout(30000);
+
     this.app.options['skip-install'] = true;
     this.app.run({}, function () {
 
