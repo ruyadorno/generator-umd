@@ -72,7 +72,7 @@ yo umd
 
 ### Support a way of easily adding dependencies
 
-If you need to consume other libraries from inside your module, you will have to take a look at the [UMD spec](https://github.com/umdjs/umd/blob/master/returnExportsGlobal.js) and implement it by yourself.
+If you need to consume other libraries from inside your module, you will have to take a look at the [UMD spec](https://github.com/umdjs/umd/blob/master/templates/returnExportsGlobal.js) and implement it by yourself.
 
 I have plans to add this feature in a subgenerator, using the comment metadata from the generated module file.
 
