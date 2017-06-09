@@ -21,7 +21,7 @@ This script is an [Yeoman Generator](http://yeoman.io/), meant to be used with s
 
 - File definition for both **npm** and **Bower** package managers will be also generated along with the initial structure.
 
-- A simple [Mocha](http://visionmedia.github.io/mocha/) test suit will be available with some dummy tests.
+- A simple [Mocha](http://mochajs.org/) test suit will be available with some dummy tests.
 
 
 ## Setup
